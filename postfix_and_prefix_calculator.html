@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Data Structure : Infix Postfix Prefix - Converter</title>
+     <script src="jquery-1.3.2.min.js" type="text/javascript"></script>
+      <script src="jquery.backgroundPosition.js" type="text/javascript"></script>
+    <script src="ds.js"></script>
+      <script type="text/javascript">
+		$(function(){
+		
+		  $('#midground').css({backgroundPosition: '0px 0px'});
+		  $('#foreground').css({backgroundPosition: '0px 0px'});
+		  $('#background').css({backgroundPosition: '0px 0px'});
+		
+			$('#midground').animate({
+				backgroundPosition:"(-10000px -2000px)"
+			}, 240000, 'linear');
+			
+			$('#foreground').animate({
+				backgroundPosition:"(-10000px -2000px)"
+			}, 120000, 'linear');
+			
+			$('#background').animate({
+				backgroundPosition:"(-10000px -2000px)"
+			}, 480000, 'linear');
+			
+		});
+	</script>
+      
+      <script>
+         /* function onDeleteKeyPressed(value, caretPos){
+        var expression = value.split('');
+        
+        if(expression.length > 1){
+            expression.splice((caretPos - 1), 1);
+            return expression.join('');
+        }
+    }*/
+(function() {
+   'use strict';
+   var i,c;
+function init(){ 
+   i=document.getElementById('keyboard').getElementsByTagName('input');
+for(c=0;c<i.length;c++) {
+if(i[c].type==='button') {
+   i[c].addEventListener('onclick',makeClickHandler(c));
+   }
+  }
+    
+
+document.getElementById('clear').onclick=function() {
+   document.getElementById('expression').value='';
+  }
+ }
+
+function makeClickHandler(c) {
+   i[c].onclick=function() {
+   document.getElementById('expression').value+=this.value.toUpperCase();
+  };
+ }
+    
+
+   window.addEventListener?
+   window.addEventListener('load',init,false):
+   window.attachEvent('onload',init);
+})();
+</script>
+     
+    <!-- Bootstrap CSS -->
+    <style type="text/css">
+                 /*-- mside bar code--*/
+        
+
+        
+         /*-- moving background try code--*/
+        #background {
+	background: url(background.png) repeat 5% 5%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 100;
+}
+
+#midground {
+	background: url(midground.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 100;
+}
+
+#foreground {
+	background: url(foreground.png) repeat 90% 110%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 200;
+}
+        #page-wrap {
+	width: auto;
+	margin: 0 auto;
+	position: relative;
+	z-index: 300;
+	/*background: rgba(0,0,0,0.7);*/
+	overflow: hidden;
+	
+	
+	
+}
+        
+        
+        /*-- Down arrow code--*/
+        i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+        
+        .dropdown {
+  position:relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: block;
+  position: relative;
+  min-width: 160px;
+      background-color: #f9f9f9;
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        hr.new4 {
+  border: 1px solid red;
+}
+        #keyboard {
+            
+            align-self: center
+   display:inline-block;
+    padding:10px 15px;
+/*  border:1px solid #009;*/
+    border-radius:10px;
+/*  background-color:#87cdf9; */
+    text-align:center;
+    box-shadow:4px 4px 4px #999;
+ }
+#keyboard div {
+    margin:5px 0;
+   
+ }
+        
+#space {
+    width:184px;
+ }
+#keyboard label {
+    
+    margin-top:20px;
+    font-family:serif;
+    text-decoration:underline;
+ }
+#keyboard input {
+    box-shadow:2px 2px 2px #666;
+ }
+#keyboard input[type="text"] {
+    margin-top:20px;
+    border:1px solid #666;
+    border-radius:4px;
+    box-shadow:none;
+ }
+body {
+    
+    
+  
+font-family: "Courier New";
+background-color: rgb(185,179,175);}
+h1 { 
+color: rgb(255,255,255);
+         text-decoration: underline;}
+        h1 {
+text-align: center;}
+p {
+text-align: center;}
+       
+
+.credits {
+text-align: right;}
+/* Dropdown Button */
+
+
+/* The container <div> - needed to position the dropdown content */
+
+</style>
+  </head>
+  <body>
+        
+      <div id="background"></div>
+	<div id="midground"></div>
+	<div id="foreground"></div>
+      <div id="page-wrap"> 
+    
+    <div class="container">
+        <div class="jumbotron mt-3 text-center">
+          
+            <h1 class="lead" style="font-size:10vmin">INFIX CALCULATOR</h1>
+            
+            
+            
+            <div>
+                <label for="expression">
+                    <p style="color:wheat;""text-align:right;">Type the Expression below without space<br><small>format 1: (A + B) * (C + D)<br>format 2: 6+7/1*(2-4)^1^3 <br> </small></p>
+                    
+            <hr class="new4">
+            <p style="color:wheat;">Enter the Infix expression below in box and press Convert<br>
+                <b>(Don't give space)</b></p>
+                
+                    
+                    
+
+                    <br>
+                    <br>
+                    <div id="keyboard">
+<div>
+ <input type="button" value="1">
+ <input type="button" value="2">
+ <input type="button" value="3">
+ <input type="button" value="4">
+ <input type="button" value="5">
+ <input type="button" value="6">
+ <input type="button" value="7">
+ <input type="button" value="8">
+ <input type="button" value="9">
+    <input type="button" value="0">
+    
+</div><div>
+<div>
+ <input type="button" value="Q">
+ <input type="button" value="W">
+ <input type="button" value="E">
+ <input type="button" value="R">
+ <input type="button" value="T">
+ <input type="button" value="Y">
+ <input type="button" value="U">
+ <input type="button" value="I">
+ <input type="button" value="O">
+ <input type="button" value="P">
+</div><div>
+ <input type="button" value="A">
+ <input type="button" value="S">
+ <input type="button" value="D">
+ <input type="button" value="F">
+ <input type="button" value="G">
+ <input type="button" value="H">
+ <input type="button" value="J">
+ <input type="button" value="K">
+ <input type="button" value="L">
+</div><div>
+ <input type="button" value="Z">
+ <input type="button" value="X">
+ <input type="button" value="C">
+ <input type="button" value="V">
+ <input type="button" value="B">
+ <input type="button" value="N">
+ <input type="button" value="M">
+</div><div>
+ <input id="space" type="button" value=" ">
+ <input id="clear" type="reset" value="clear">
+                        </div>
+                        <div> <input type="button" value="^">
+ <input type="button" value="(">
+ <input type="button" value=")">
+ <input type="button" value="*">
+ <input type="button" value="/">
+ <input type="button" value="+">
+ <input type="button" value="-"></div><div>
+<input type="text" class="form-control form-control-lg" name="expression" id="expression" placeholder="Write the equation..">
+
+</div><!-- end #keyboard -->
+
+   
+                   <div style="color: burlywood"> <label for="fullpostfix">
+                        <input type="radio"  name="fixer" checked id="fullpostfix" value="1"> Postfix Table 
+                    </label>
+                   
+                    <label for="fullprefix">
+                        <input type="radio"  name="fixer" id="fullprefix" value="2"> Prefix Table
+                    </label>
+                       <br>
+                   <br>
+                   <button class="btn btn-primary btn-lg" id="convert" role="button">Convert</button>
+                        
+            </div>
+                        <br>
+                        	<br>
+            <div id="shortresult">
+                <p style="text-align: center"  class="lead" ><h3>Direct Answer<br>will be shown here<br> <i class="arrow down"></i> </h3>  Postfix :  <span id="postfix" class="font-weight-bold"></span> |  Prefix :  <span id="prefix" class="font-weight-bold"></span>
+                
+            </div>
+                        
+        </div>
+
+        <div id="fullresult">
+            <div class="row">
+                    <div class="col-md-8">
+                            <table class="table table-striped table-bordered">
+                                    <thead class="thead-inverse text-left">
+                                        <caption><h3>Full Conversion Process<br><i class="arrow down"></i></h3></caption>
+                                        <tr>
+                                            <th>Sr. no.</th>
+                                            <th>Expression</th>
+                                            <th>Stack</th>
+                                            <th id="itemname">Postfix</th>
+                                        </tr>
+                                    </thead>
+            
+                                    <tbody id="tabledata" class="text-left">
+                                        
+                                       
+                                    </tbody>
+                                    <br>
+                                    <span id="ifpre" class="lead"></span>
+                            </table>
+                    </div>
+    
+                    <div "col-md-4 text-center">
+                            <h2>
+                                Algorithm used<br>
+                                <i class="arrow down"></i>
+                            </h2>
+                       <div class="dropdown">
+  <span>POSTFIX</span>
+  <div class="dropdown-content">
+    <small id="algo">
+                               
+                                <ul class="text-left" id="postfixAlgo">
+                                    <li>Step 1: Add '')" to the end of the infix expression</li>
+                                    <li>Step 2: Push(o nto the stack </li>
+                                    <li>Step 3: Repeat until each character in the infix notation is scanned 
+                                        <ul>
+                                               <li> IF a(is encountered, push it on the stack </li>
+                                                <li>IF an operand (whetheradigit oracharacter) is encountered, add it postfix expression. </li>
+                                                <li>IF a ")" is encountered, then <br> 
+                                                    a. Repeatedly pop from stack and add it to the postfix expression until a "(" is encountered. <br>
+                                                    b. Discard the "(".That is, remove the(from stack and do not add it to the postfix expression 
+                                                </li>
+                                                <li>IF an operator O is encountered, then <br>
+                                                    a. Repeatedly pop from stack and add each operator ( popped from the stack) to the postfix expression which has the same precedence orahigher precedence than O
+                                                    <br>b. Push the operator to the stack 
+                                                </li>
+                                        </ul>
+                                                [END OF IF] 
+                                    </li>
+                                    <li>Step 4: Repeatedly pop from the stack and add it to the postfix expression until the stack is empty </li>
+                                    <li>Step 5: EXIT </li>
+                                </ul>
+      </small></div>
+</div>
+
+                        <div class="dropdown">
+  <span>PREFIX</span>
+  <div class="dropdown-content">
+
+                                <ul class="text-left" id="prefixAlgo">
+                                        <li>Step 1: Reverse the infix string. Note that while reversing the string you must interchange left and right parentheses. </li>
+                                        <li>Step 2: Obtain the postfix expression of the infix expression Step 1. </li>
+                                        <li>Step 3: Reverse the postfix expression to get the prefix expression</li>
+                                </ul>
+                        
+                    </div>
+            </div>
+
+        </div>
+    </div>
+  </div>
+</div>
+                            
+                            
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script>
+        function sel(x){return document.getElementById(x)}
+        $("#fullresult").hide();
+        function convert()
+        {
+            document.getElementById("postfix").innerHTML = infixToPostfix(document.getElementById("expression").value)['postfixExpression'];
+            document.getElementById("prefix").innerHTML = infixToPrefix(document.getElementById("expression").value)['prefixExpression'];
+        }
+        //converter button and expression
+        $("button#convert").click(function(){
+            convert();
+            var items, tab = "";
+            $("#fullresult").show();
+
+            switch($('input[name=fixer]:checked').val())
+            {
+                case '1':
+                    items = infixToPostfix(document.getElementById("expression").value,1)['table'];
+                    sel("itemname").innerHTML = "Postfix";
+                    break;
+                case '2':
+                    items = infixToPrefix(document.getElementById("expression").value,1)['table'];
+                    sel('itemname').innerHTML = "Prefix";
+                    $("#ifpre").html("Reverse the resultant expression for prefix");
+                    break;
+            }
+
+            for(var i = 0; i < items.exp.length; i++)
+            {
+                tab += "<tr><td>" + i +"</td><td>"+items['exp'][i]+"</td><td>"+items['stak'][i]+"</td><td>"+items['conexp'][i]+"</td></tr>";
+            }
+
+            sel("tabledata").innerHTML = tab;
+        })
+
+        //evaluator button and expression
+
+        
+    </script>
+                </label>
+            </div>
+        </div>
+      </div>
+    </body>
+</html>

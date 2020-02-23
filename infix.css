@@ -1,0 +1,262 @@
+	.mediaViewInfo {
+		--web-view-name: Web 1920 – 1;
+		--web-view-id: Web_1920___1;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Web_1920___1;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	#Web_1920___1 {
+		position: absolute;
+		box-sizing: border-box;
+		background: #E5E5E5;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		--web-view-name: Web 1920 – 1;
+		--web-view-id: Web_1920___1;
+		--web-enable-deep-linking: true;
+	}
+img {  position: absolute;  left: 0;  top: 0;  width: 100%;  height: auto;}
+.wrapper {  position: relative;  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+
+	.ID50_Beautiful_and_Minimalist_ {
+		position: absolute;
+		overflow: visible;
+		width: 1366px;
+		height: 766px;
+		left: 0px;
+		top: -100px;
+	}
+	.Ellipse_1 {
+		position: absolute;
+		overflow: visible;
+		width: 174px;
+		height: 179px;
+		left: 142px;
+		top: 24px;
+	}
+	.sg {
+		position: absolute;
+		overflow: visible;
+		width: 133px;
+		height: 108px;
+		left: 163px;
+		top: 60px;
+	}
+	#INFIX_CALCULATOR {
+		filter: drop-shadow(0px 30px 6px rgba(201, 227, 17, 0.161));
+		position: absolute;
+		left: 762px;
+		top: 38px;
+		overflow: visible;
+		width: 397px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Frank Ruhl Hofshi;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 44px;
+		color: rgba(243,237,237,1);
+	}
+	textarea {
+		position: absolute;
+		overflow: visible;
+		width: 736px;
+		height: 148px;
+		left: 618px;
+		top: 312px;
+	}
+	#___Write_your_equation_here__ {
+		opacity: 0.76;
+		position: absolute;
+		left: 705px;
+		top: 363px;
+		overflow: visible;
+		width: 483px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Frank Ruehl CLM MediumOblique;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 44px;
+		color: rgba(217,214,214,1);
+	}
+	#CONVERT_TO {
+		position: absolute;
+		left: 858px;
+		top: 662px;
+		overflow: visible;
+		width: 257px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Frank Ruehl CLM MediumOblique;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 44px;
+		color: rgba(217,214,214,1);
+	}
+	#Rectangle_3 {
+		opacity: 0.36;
+	}
+	.Rectangle_3 {
+		position: absolute;
+		overflow: visible;
+		width: 231px;
+		height: 78px;
+		left: 1123px;
+		top: 708px;
+	}
+	#POSTFIX {
+		position: absolute;
+		left: 1161px;
+		top: 722px;
+		overflow: visible;
+		width: 156px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Franklin Gothic Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 44px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_8 {
+		position: absolute;
+		overflow: visible;
+		width: 203px;
+		height: 67px;
+		left: 1097px;
+		top: 486px;
+	}
+	#OPERATORS {
+		position: absolute;
+		left: 1121px;
+		top: 498px;
+		overflow: visible;
+		width: 156px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: EmojiOne Color;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 29px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_9 {
+		position: absolute;
+		overflow: visible;
+		width: 203px;
+		height: 67px;
+		left: 676px;
+		top: 486px;
+	}
+	#ALPHABETS {
+		position: absolute;
+		left: 703px;
+		top: 498px;
+		overflow: visible;
+		width: 150px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: EmojiOne Color;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 29px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_10 {
+		position: absolute;
+		overflow: visible;
+		width: 736px;
+		height: 196px;
+		left: 618px;
+		top: 827px;
+	}
+	#___Your_output_will_be_here__ {
+		opacity: 0.76;
+		position: absolute;
+		left: 676px;
+		top: 898px;
+		overflow: visible;
+		width: 477px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Frank Ruehl CLM MediumOblique;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 44px;
+		color: rgba(217,214,214,1);
+	}
+	#Rectangle_11 {
+		opacity: 0.36;
+	}
+	.Rectangle_11 {
+		position: absolute;
+		overflow: visible;
+		width: 231px;
+		height: 78px;
+		left: 618px;
+		top: 708px;
+	}
+	#PREFIX {
+		position: absolute;
+		left: 668px;
+		top: 722px;
+		overflow: visible;
+		width: 133px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Franklin Gothic Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 44px;
+		color: rgba(245,245,245,1);
+	}
+	#Rectangle_12 {
+		opacity: 0.14;
+	}
+	.Rectangle_12 {
+		position: absolute;
+		overflow: visible;
+		width: 633px;
+		height: 147px;
+		left: 658px;
+		top: 146px;
+	}
+	#_NOTE__Type_the_Expression__wi {
+		position: absolute;
+		left: 679.5px;
+		top: 155.5px;
+		overflow: visible;
+		width: 592px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: EmojiOne Color;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 29px;
+		color: rgba(255,255,255,1);
+	}
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+
+
+[object Promise]
